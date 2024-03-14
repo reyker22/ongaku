@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+} 
+
+.wrapper{
+    background: #C5C5C5;
+    background-position: 50%;
+    background-size: cover;
+    width: 100%;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+    background: white;
+}
+
+.btn{
+    display: block;
+    width: 144px;
+    padding: 5px 0;
+    text-align: center;
+    background: #D51E7D;
+    color:white;
+    border-radius: 5px;
+}
+
+/* Хеддер */
+
+.navigation{
+    display: flex;
+    padding: 0 35px;
+    min-height: 84px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #C5C5C5;
+    font-weight: 600;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.menu a{
+    color: black;
+}
+
+.account{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search{
+    position: relative;
+}
+
+.search-input{
+    width: 100%;
+    padding: 5px 10px;
+    border: 1px solid #58595B;
+    border-radius: 5px;
+}
+
+.search-btn{
+    position: absolute;
+    background: url(../img/search.svg) no-repeat;
+    background-position: 50%;
+    background-size:100%;
+    border:none;
+    cursor: pointer;
+    right: 10px;
+    width: 10%;
+    outline: none;
+    height: 100%;
+}
+
+/* Главная часть */
+
+main{
+    position: relative;
+}
+
+.tags{
+    display: flex;
+    gap: 15px;
+    padding: 15px 0;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+.tags a{
+    color: #7E7E7E;
+    font-weight: 400;
+    transition: .1s;
+}
+
+.tags a:hover{
+    color: black;
+    font-weight: 500;
+    border-bottom: 1px solid #DF1D1D;
+}
+
+.main-page{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 38px;
+}
+
+.mainside{
+    padding-top: 70px;
+}
+
+.mainside h2{
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.releases{
+    margin-top: 25px;
+}
+
+.release-list{
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 160px 160px 160px 160px;
+    gap: 50px;
+}
+
+.release-card img{
+    width: 100%;
+}
+
+.release-card p:nth-child(2){
+    font-weight:500;
+    color: black;
+}
+
+.release-card p:nth-child(3),
+.release-card p:nth-child(4){
+    overflow: hidden;
+    text-wrap: nowrap;
+    font-weight:400;
+    text-overflow: ellipsis;
+    font-size: small;
+    color: #7E7E7E;
+}
+
+.aside{
+    width: 25%;
+    padding-left: 35px;
+    border-left:1px solid #C5C5C5;
+}
+
+.aside h3{
+    margin: 20px 0;
+    text-align: center;
+}
+
+.performers{
+    display: flex;
+    gap: 100px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.performers-card{
+    width: 228px;
+    position: relative;
+}
+
+.performers-card img{
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.performers-card p{
+    top: 15px;
+    left: 5px;
+    position: relative;
+    color: white;
+    font-weight: bold;
+    padding-bottom: 200px;
+}
+
+.chart{
+    padding: 50px 0;
+    border-bottom: 1px solid #C5C5C5;
+}
+
+.chart-list{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 25px;
+}
+
+.chart-card{
+    display: flex;
+    align-items: center;
+}
+
+.chart-card div{
+    margin-left: 15px;
+}
+
+.chart-card div p:nth-child(1){
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    color: black;
+}
+
+.chart-card div p:nth-child(2){
+    overflow: hidden;
+    text-wrap: nowrap;
+    font-weight:400;
+    text-overflow: ellipsis;
+    font-size: small;
+    color: #7E7E7E;
+}
+
+/* Футер */
+
+footer{
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
