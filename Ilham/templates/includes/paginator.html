@@ -1,0 +1,24 @@
+{% if page_obj.has_other_pages %}
+    <article class="content">
+        <ul class="paginator">
+            {% if page_obj.has_previous %}
+                <li><a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">◁</a></li>
+            {% endif %}
+
+            {% for foo in paginator.page_range %}
+                {% if page_obj.number == foo %}
+                    <li class="current"><p>{{ foo }}</p></li>
+                {% elif foo >= page_obj.number|add:-2 and p <= page_obj.number|add:2 %}
+                {% else %}
+                    <li><a href="?q={{ query }}&page={{ foo }}">{{ foo }}</a></li>
+                {% endif %}
+
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <li><a href="?q={{ query }}&page={{ page_obj.next_page_number }}">▷</a></li>
+            {% endif %}
+        </ul>
+    </article>
+
+{% endif %}

@@ -1,0 +1,27 @@
+{% load static %}
+
+<header>
+    <nav class="navigation">
+        <ul class="menu">
+            <li><a href="{% url 'home' %}"><img src="{% static 'main/img/logo.png' %}" alt="logo"></a></li>
+            <li><a href="{% url 'home' %}">Главная</a></li>
+            <li><a href="{% url 'library' %}">Моя библиотека</a></li>
+        </ul>
+        <ul class="account">
+            <li>
+                <form class="search" action="{% url 'search_results' %}" method="get">
+                    <input class="search-input" name="q" type="text" placeholder="Поиск">
+                    <button class="search-btn" type="submit"></button>
+                </form>
+            </li>
+            {% if user.is_authenticated %}
+                <form action="{% url 'account:logout' %}" method="post">{% csrf_token %}
+                    <button class="btn" type="submit">Выйти из аккаунта</button>
+                </form>
+            {% else %}
+                <li><a class="btn" href="{% url 'account:login' %}">Войти</a></li>
+                <li><a class="btn" href="{% url 'account:registration' %}">Регистрация</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

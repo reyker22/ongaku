@@ -1,0 +1,19 @@
+<div class="release-list">
+    {% for release in releases %}
+        <a class="track" href="">
+            <div class="hidden-overlay">
+                Играть
+            </div>
+            <div class="release-card">
+                <div class="picture">
+                    <img src="{{ release.track_img.url }}" alt="{{ release.track_img.name }}">
+                </div>
+
+                <p>{{ release.track_name }}</p>
+                <p>{{ release.performer }}</p>
+                <p>{{ release.genre }}</p>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+{% include 'includes/paginator.html' %}

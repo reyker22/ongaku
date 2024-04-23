@@ -1,0 +1,14 @@
+<div class="aside">
+    <h3>Исполнители которых мы советуем послушать</h3>
+    <div class="performers">
+        {% for performer in performers %}
+            <a href="">
+                <div class="performers-card">
+                    <img src="{{ performer.performer_img.url }}"
+                     alt="{{ performer.performer_img.name }}">
+                    <p>{{ performer.performer_name }}</p>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+</div>

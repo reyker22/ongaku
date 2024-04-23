@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extrastyle %}
+    <link rel="stylesheet" href="{% static 'account/css/login_register_style.css' %}">
+    <link rel="stylesheet" href="{% static 'account/css/total_style.css' %}">
+{% endblock %}
+
+{% block content %}
+    <form class="login-form" method="POST">
+        {% csrf_token %}
+        <a class="logo" href="{% url 'home' %}"><img src="{% static 'main/img/logo.svg' %}" alt=""></a>
+        <h2 class="caption">Войдите или зарегестрируйтесь</h2>
+
+        <div class="form-error">{{ form.non_field_errors }}</div>
+
+        {% for f in form %}
+            {% if f.label == 'Пароль' %}
+                <label hidden="hidden" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}
+                <div class="input-checkbox">
+                    <input class="checkbox" type="checkbox" name="show-pass" id="show-pass">
+                    <label class="show-pass-label" for="show-pass">Показать пароль</label>
+                </div>
+            {% else %}
+                <label hidden="hidden" for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}
+                <div class="form-error">{{ f.errors }}</div>
+            {% endif %}
+        {% endfor %}
+
+        <button type="submit" class="btn-register">Зарегистрироваться</button>
+        <a class="btn-register" href="{% url 'account:login' %}">Войти</a>
+    </form>
+{% endblock %}
