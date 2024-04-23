@@ -1,0 +1,35 @@
+@font-face{
+    font-family: "Montserrat";
+    src: url(../fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Montserrat";
+    font-weight: bold;
+    src: url(../fonts/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "Montserrat";
+    font-weight: 600;
+    src: url(../fonts/Montserrat-SemiBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.3s;
+    color: black;
+}
+
+*:focus{
+    outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+    position: relative;
+}

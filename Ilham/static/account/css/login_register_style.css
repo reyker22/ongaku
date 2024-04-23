@@ -1,0 +1,112 @@
+body{
+    background: url(../img/login-register-bg.png) no-repeat;
+    background-size:cover;
+}
+
+.wrapper{
+    width: 480px;
+    margin: 146px auto;
+    background: #FFFFFF;
+    border-radius: 48px;
+}
+
+.logo{
+    margin: 5px 160px;   
+}
+
+.caption{
+    font-weight: 600;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin: 50px 0 28px 0;
+}
+
+.login-form{
+    padding: 115px 46px;
+    margin: auto;
+}
+
+input{
+    width: 100%;
+    background: none;
+    border:none;
+    border-bottom: 1px solid #D51E7D; 
+    padding: 15px 0;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.input-checkbox{
+    width: 100%;
+    margin: 20px 0 0 0;
+}
+
+.checkbox{
+    display: none;
+}
+
+.checkbox:checked~.show-pass-label::before{
+    background: url(../img/checkbox-cheked.svg) no-repeat;
+}
+
+.show-pass-label{
+    color: #58595B;
+    font-weight: 600;
+    font-size: 18px;
+    display: flex;
+    align-items:center;
+}
+
+.checkbox:checked~.show-pass-label{
+    color:#0E0906;
+}
+
+.show-pass-label::before{
+    content:"";
+    background: url(../img/checkbox.svg) no-repeat;
+    width: 30px;
+    height: 30px;
+    margin-right: 6px;
+}
+
+.btn-submit {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid ;
+    height: 50px;
+    background:  #D51E7D;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+
+}
+
+.btn-submit:hover {
+    background-color:#ac0f60;
+}
+
+.btn-register {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid #D51E7D;
+    color: #D51E7D;
+    padding: 15px 0;
+    background: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.btn-register:hover {
+    color: #ffffff;
+    background-color: #D51E7D;
+    border: 1px solid #D51E7D;
+}
